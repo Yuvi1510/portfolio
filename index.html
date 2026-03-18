@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yuvraj Armaja Pun · portfolio</title>
+  <!-- external CSS -->
+  <link rel="stylesheet" href="index.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* small additional style for profile image */
+    .profile-img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+      margin-bottom: 1.5rem;
+    }
+    .about-grid {
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Sticky navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="#home">Yuvraj Armaja Pun</a>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#work" class="nav-link">Work</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="Yuvraj_Pun_CV.pdf" class="btn-download" id="downloadCvBtn" download>
+          <i class="fas fa-file-pdf" style="margin-right: 0.5rem;" ></i>Download CV
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- HOME section -->
+    <section id="home" class="section home-section">
+      <div class="container">
+        <div class="home-content">
+          <span class="badge">👋 नमस्ते, I'm</span>
+          <h1>Yuvraj Armaja Pun</h1>
+          <p class="lead">Java & Spring Boot developer · BIT student</p>
+          <!-- profile photo added in home section for visibility (you can replace with your image) -->
+          <img src="image.png" alt="Yuvraj's photo" class="profile-img" id="profilePhoto">
+          <div class="home-buttons">
+            <a href="#work" class="btn primary">See work <i class="fas fa-arrow-right"></i></a>
+            <a href="#" class="btn secondary" id="downloadCvBtn2"><i class="fas fa-download"></i> CV</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT section (personalized with Yuvraj) -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <h2 class="section-title">About me</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p><strong>Yuvraj Armaja Pun</strong> — born June 12, 2004 (<span id="dynamicAge"></span> years old).</p>
+            <p>I'm currently pursuing a <strong>Bachelor of Information Technology (BIT)</strong> at <strong>Informatics College</strong>, 4th semester. Passionate about backend development and building robust applications.</p>
+            <p>My core strength lies in <strong>Java and Spring Boot</strong>, and I enjoy crafting clean, scalable solutions. Always eager to learn and collaborate on exciting projects.</p>
+            <p><i class="fas fa-map-pin"></i> Based in Nepal · open to internships</p>
+          </div>
+          <div class="about-stats">
+            <div class="stat-item"><span class="stat-number">Java</span> Spring Boot expert</div>
+            <div class="stat-item"><span class="stat-number">4th</span> semester BIT</div>
+            <div class="stat-item"><span class="stat-number">Informatics</span> College</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK section (skills oriented) -->
+    <section id="work" class="section work-section">
+      <div class="container">
+        <h2 class="section-title">Skills & focus</h2>
+        <div class="work-grid">
+          <div class="work-card">
+            <div class="work-icon"><i class="fab fa-java"></i></div>
+            <h3>Java</h3>
+            <p>Core Java, multithreading, collections, and functional programming.</p>
+          </div>
+          <div class="work-card">
+            <div class="work-icon"><i class="fas fa-leaf"></i></div>
+            <h3>Spring Boot</h3>
+            <p>REST APIs, Spring Data JPA, Security, and microservices basics.</p>
+          </div>
+          <div class="work-card">
+            <div class="work-icon"><i class="fas fa-database"></i></div>
+            <h3>Backend & DB</h3>
+            <p>Hibernate, MySQL, PostgreSQL, and database design.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT section -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <h2 class="section-title">Let's connect</h2>
+        <div class="contact-content">
+          <p>Have a project or just want to discuss Java?<br>Feel free to reach out.</p>
+          <div class="contact-actions">
+            <a href="#" class="btn primary" id="contactCvBtn"><i class="fas fa-file-pdf"></i> Download CV (PDF)</a>
+            <div class="social-links">
+              <a href="https://github.com/Yuvi1510" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="www.linkedin.com/in/yuvraj-pun-911982268" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+          <p class="email">yuvraj.pun@student.informatics.edu.np · <span class="fake-link" id="downloadFooter">CV direct</span></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Yuvraj Armaja Pun – built with Java enthusiasm.</p>
+  </footer>
+
+  <!-- external JavaScript file -->
+  <script src="index.js"></script>
+  <!-- inline script for dynamic age (also placed in script.js but here as fallback and clarity) -->
+  <script>
+    // dynamic age calculation based on birthday: 2004-06-12
+    function updateAge() {
+      const birthDate = new Date(2004, 5, 12); // month is 0-indexed: 5 = June
+      const today = new Date();
+      let age = today.getFullYear() - birthDate.getFullYear();
+      const monthDiff = today.getMonth() - birthDate.getMonth();
+      if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+      }
+      const ageSpan = document.getElementById('dynamicAge');
+      if (ageSpan) ageSpan.textContent = age;
+    }
+    window.addEventListener('DOMContentLoaded', updateAge);
+  </script>
+  <!-- also make sure photo is easily replaceable: just change src of #profilePhoto -->
+</body>
+</html>
