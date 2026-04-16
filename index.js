@@ -31,25 +31,25 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // ----- simulate CV download (all buttons & links) -----
-  function simulateDownload() {
-    // Create a dummy text file to simulate CV download (since we can't provide a real PDF)
-    const blob = new Blob(
-      ["This is a placeholder for Elias Mendoza's CV.\n\n---\nExperience: Senior creative developer\nSkills: UI/UX, React, Python, Three.js\nContact: hello@elias.design\n\n(Replace this with your actual CV.pdf)"],
-      { type: 'application/pdf' } // mimic pdf
-    );
-    const url = window.URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'Yuvraj_Pun_CV.pdf'; // filename
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    window.URL.revokeObjectURL(url);
+  // // ----- simulate CV download (all buttons & links) -----
+  // function simulateDownload() {
+  //   // Create a dummy text file to simulate CV download (since we can't provide a real PDF)
+  //   const blob = new Blob(
+  //     ["This is a placeholder for Elias Mendoza's CV.\n\n---\nExperience: Senior creative developer\nSkills: UI/UX, React, Python, Three.js\nContact: hello@elias.design\n\n(Replace this with your actual CV.pdf)"],
+  //     { type: 'application/pdf' } // mimic pdf
+  //   );
+  //   const url = window.URL.createObjectURL(blob);
+  //   const a = document.createElement('a');
+  //   a.href = url;
+  //   a.download = 'Yuvraj_Pun_CV.pdf'; // filename
+  //   document.body.appendChild(a);
+  //   a.click();
+  //   document.body.removeChild(a);
+  //   window.URL.revokeObjectURL(url);
 
-    // Optional small feedback (can be improved)
-    alert('📄 CV download started (simulated PDF). Replace with your real file.');
-  }
+  //   // Optional small feedback (can be improved)
+  //   alert('📄 CV download started (simulated PDF). Replace with your real file.');
+  // }
 
   // select ALL elements that should trigger download
   const downloadTriggers = [
